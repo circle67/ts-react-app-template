@@ -1,1 +1,1 @@
-# ts-react-template
+# ts-react-app-template
