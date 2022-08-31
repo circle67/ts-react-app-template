@@ -45,7 +45,7 @@ module.exports = {
 			{
 				test: /\.css$/i,
 				use: [
-					'style-loader',
+					MiniCssExtractPlugin.loader,
 					'css-loader',
 					{
 						loader: 'postcss-loader',
@@ -56,10 +56,6 @@ module.exports = {
 						},
 					},
 				],
-			},
-			{
-				test: /\.css$/i,
-				use: [MiniCssExtractPlugin.loader, 'css-loader'],
 			},
 			{
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
