@@ -43,7 +43,18 @@ module.exports = {
 			},
 			{
 				test: /\.css$/i,
-				use: ['style-loader', 'css-loader'],
+				use: [
+					'style-loader',
+					'css-loader',
+					{
+						loader: 'postcss-loader',
+						options: {
+							postcssOptions: {
+								plugins: [['postcss-preset-env']],
+							},
+						},
+					},
+				],
 			},
 			{
 				test: /\.css$/i,
